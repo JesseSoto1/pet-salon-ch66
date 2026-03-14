@@ -46,3 +46,32 @@ function displayPets(){
     section.style.fontSize = "24px";
     
 }
+
+function Pet(name, age, breed, gender, service){
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.gender = gender;
+    this.service = service;
+}
+
+let pet4 = new Pet("Firulais", 4, "Mexican Yellow Dog", "Male", "Full Groom");
+let pet5 = new Pet("Solovino", 9, "Mexican Yellow Dog", "Male","Vaccines" );
+let pet6 = new Pet("Chuletas", 3, "Dauschund", "Male","Nail Trimming");
+
+const productForm = document.querySelector("form");
+
+function registerProduct(event){
+
+    event.preventDefault(); 
+    console.log(event);
+
+  
+    
+    let name = productForm.elements["petName"].value;
+    let age = productForm.elements["petAge"].value;
+    let breed = productForm.elements["petBreed"].value;
+    let gender = productForm.elements["petGender"].value;
+    let service = productForm.elements["petService"].value;
+
+}
