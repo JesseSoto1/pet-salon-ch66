@@ -47,6 +47,16 @@ function displayPets(){
     
 }
 
+
+
+
+// let pet4 = new Pet("Firulais", 4, "Mexican Yellow Dog", "Male", "Full Groom");
+// let pet5 = new Pet("Solovino", 9, "Mexican Yellow Dog", "Male","Vaccines" );
+// let pet6 = new Pet("Chuletas", 3, "Dauschund", "Male","Nail Trimming");
+
+const productForm = document.querySelector("form");
+const body = document.getElementById("body");
+
 function Pet(name, age, breed, gender, service){
     this.name = name;
     this.age = age;
@@ -55,23 +65,36 @@ function Pet(name, age, breed, gender, service){
     this.service = service;
 }
 
-let pet4 = new Pet("Firulais", 4, "Mexican Yellow Dog", "Male", "Full Groom");
-let pet5 = new Pet("Solovino", 9, "Mexican Yellow Dog", "Male","Vaccines" );
-let pet6 = new Pet("Chuletas", 3, "Dauschund", "Male","Nail Trimming");
-
-const productForm = document.querySelector("form");
-
-function registerProduct(event){
+function registerPet(event){
 
     event.preventDefault(); 
     console.log(event);
+    // constructor//
 
   
+
     
     let name = productForm.elements["petName"].value;
     let age = productForm.elements["petAge"].value;
     let breed = productForm.elements["petBreed"].value;
     let gender = productForm.elements["petGender"].value;
     let service = productForm.elements["petService"].value;
+    
+
+const row = document.createElement("tr");
+const newPet = new Pet(name, age, breed, gender, service);
+
+
+row.innerHTML = `
+    <td>${newPet.name}</td>
+    <td>${newPet.age}</td>
+    <td>${newPet.breed}</td>
+    <td>${newPet.gender}</td>
+    <td>${newPet.service}</td>
+    
+
+
+`;
+body.appendChild(row);
 
 }

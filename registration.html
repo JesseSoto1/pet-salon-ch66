@@ -36,10 +36,10 @@
       
     </div>
 
-    <button onclick = "displayPets()" >Registered Pets</button>
+    <button onclick = "displayPets()" >Show Registered Pets</button>
 
     <section>
-        <h2>Registration</h2>
+        <h2>New Pet Registration</h2>
 
         <form class="bg-light border p-5 mt-5">
 
@@ -83,7 +83,26 @@
         </form>
 
     </section>
+
+    <section>
     
+      <table class="table table-bordered">
+        <tr class="table table-bordered">
+          
+            <th>Name</th>
+            <th>Age</th>
+            <th>Breed</th>
+            <th>Gender</th>
+            <th>Service</th>
+            <th>Delete</th>
+            
+      
+        </tr>
+        <tbody id="body">
+            
+        </tbody>
+      </table>
+    </section>
 
    
     <script src="./scripts/registration.js"></script>

@@ -1,6 +1,9 @@
 // identify or select the form
 const productForm = document.querySelector("form"); // serch html elements
 
+//identify the tbody
+const body = document.getElementById("body");
+
 
 //function to retrieve the info
 
@@ -22,5 +25,20 @@ function registerProduct(event) {
         Category: ${category}
 
     `);
+        // use the values --1 DB-email-browser
+
+        // create the row
+        const row = document.createElement("tr");
+ 
+        row.innerHTML = `
+            <td>${name}</td>
+            <td>${price}</td>
+            <td>${category}</td>
+
+        `;
+
+        // add row to tbody
+        body.appendChild(row);
+
 
 }

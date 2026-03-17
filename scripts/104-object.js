@@ -32,3 +32,13 @@ let students = [student, student1, student2];
 
 students[2];
 console.log(students[2].name);
+
+// constructor to create multiple objects
+
+function Student(name, lastname, email){
+    this.name = name;
+    this.lastname = lastname;
+    this.email = email;
+}
+
+let student4 = Student("Kate", "Frantz", "kate,frantz@sdgku.edu");
