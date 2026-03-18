@@ -91,10 +91,23 @@ row.innerHTML = `
     <td>${newPet.breed}</td>
     <td>${newPet.gender}</td>
     <td>${newPet.service}</td>
+    <td> <button class="btn btn-danger delete-btn">Delete</button> </td>
+
     
 
 
 `;
+
+row.querySelector(".delete-btn").addEventListener("click", function(){
+            let confirmation = confirm("Are you sure you want to delete this item?");
+
+            if(confirmation){
+                row.remove();
+            }
+        
+        });
+
+
 body.appendChild(row);
 
 }
