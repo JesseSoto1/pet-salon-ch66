@@ -1,0 +1,90 @@
+:root{
+    --background-color: #f4f4fb;
+    --surface-color: #fdfdff;
+    --text-color: #1a2744;
+    --accent-color: #008fff;
+
+}
+
+.dark-mode{
+    --background-color: #1a2744;
+    --surface-color: #23345A;
+    --text-color: #f4f4fb;
+    --accent-color: #45adff;
+}
+
+
+body{
+    background-color: var(--background-color);
+    transition: .5s ease;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-container{
+    width: 300px;
+    
+}
+.image-container img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.center-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+#descriptionContainer{
+    
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px 30px;
+    background-color: var(--surface-color);
+    transition: .5s ease;
+}
+
+h1{
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+p{
+    color: var(--text-color);
+    line-height: 25px;
+}
+
+button, a{
+    background-color: var(--surface-color);
+    padding: 10px 15px;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    color: var(--accent-color);
+    margin: 10px 0px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: opacity .5s ease;
+}
+button:hover, a:hover{
+    opacity: .5;
+}
+
+#resumeContainer{
+    display: none;
+}

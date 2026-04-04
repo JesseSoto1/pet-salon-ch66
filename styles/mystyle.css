@@ -19,3 +19,9 @@ img{
     font-size: 40px;
 }
 
+.dark-mode{
+    --background-color: #1a2744;
+    --surface-color: #23345A;
+    --text-color: #f4f4fb;
+    --accent-color: #45adff;
+}
